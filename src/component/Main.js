@@ -9,6 +9,7 @@ import thankyou from "../assets/thankyou.png"
 import music from "../assets/aboutdreams.mp3"
 import play from "../assets/play.svg"
 import pause from "../assets/pause.svg"
+import Floated from "./Floated/Floated";
 import './Main.css'
 
 
@@ -24,6 +25,8 @@ function Main() {
     const [opacityChange4, setOpacityChange4] = useState(0);
     const [opacityChange5, setOpacityChange5] = useState(0);
     const [opacityChange6, setOpacityChange6] = useState(0);
+    const [opacityChange7, setOpacityChange7] = useState(0);
+    const [opacityChange8, setOpacityChange8] = useState(0);
 
     const [zindexSetter, setZIndexSetter] = useState(0);
     const [zindexSetter2, setZIndexSetter2] = useState(0);
@@ -33,6 +36,8 @@ function Main() {
     const [zindexSetter6, setZIndexSetter6] = useState(0);
     const [zindexSetter7, setZIndexSetter7] = useState(0);
     const [zindexSetter8, setZIndexSetter8] = useState(0);
+    const [zindexSetter9, setZIndexSetter9] = useState(0);
+    const [zindexSetter10, setZIndexSetter10] = useState(0);
 
     const [audioStatus, changeAudioStatus] = useState(false);
     const myRef = useRef();
@@ -61,6 +66,7 @@ function Main() {
             />
             {audioStatus ? (
                 <div className="play-pause-pos">
+                    gary song - about dreams
                     <img
                     id="pause-button"
                     src={pause}
@@ -69,6 +75,7 @@ function Main() {
                 </div>
             ) : (
                 <div className="play-pause-pos">
+                    gary song - about dreams
                     <img
                     id="play-button"
                     src={play}
@@ -179,11 +186,13 @@ function Main() {
                             </h1>
                         </div>
 
+                    
+
                         <div
                         className="light-about-me-continue4"
                         style={{
-                            opacity: `${opacityChange6}`,
-                            zIndex: `${zindexSetter8}`
+                            opacity: `${opacityChange7}`,
+                            zIndex: `${zindexSetter9}`
                         }}
                         >
                             <img id="ty" src={thankyou}/>
@@ -270,14 +279,28 @@ function Main() {
 
 
                         <div className="dark-about-me-continue3"
+                            onClick={() => {
+                                setOpacityChange6(0);
+                                setOpacityChange7(1);
+                                setZIndexSetter9(9)
+                            }}
+                            style={{
+                                opacity: `${opacityChange6}`,
+                                zIndex: `${zindexSetter8}`
+                            }}>
+                                Over the course of my life I've picked up some pretty useful skills...
+                            <Floated />
+                        </div>
+
+                        <div className="dark-about-me-continue4"
                             // onClick={() => {
                             //     setOpacityChange4(0);
                             //     setOpacityChange5(1);
                             //     setZIndexSetter7(7)
                             // }}
                             style={{
-                                opacity: `${opacityChange6}`,
-                                zIndex: `${zindexSetter8}`
+                                opacity: `${opacityChange7}`,
+                                zIndex: `${zindexSetter9}`
                             }}>
                             <a href="https://github.com/garydsong" target="_blank" rel="noopener noreferrer">
                                 <img id="aboutme-icons-a" src={giticon} />

@@ -37,6 +37,7 @@
 	height: 100vh;
 	object-fit: cover;
 	padding-left: 200px;
+	z-index: 10;
 }
 
 @keyframes gradient {
@@ -102,6 +103,10 @@
 	cursor: default;
 }
 
+.dark-about-me-continue3:hover {
+	cursor: default;
+}
+
 
 .dark-about-me-continue {
 	position: absolute;
@@ -124,10 +129,19 @@
 	color: black;
 	opacity: 0;
 	transition: 5s;
+	height: 300px;
+	width: 300px;
+	gap: 10px;
+}
+
+.dark-about-me-continue4 {
+	position: absolute;
+	color: black;
+	opacity: 0;
+	transition: 5s;
 	display: grid;
 	grid-template-columns: repeat(2, 150px);
 	height: 300px;
-	width: 300px;
 	gap: 10px;
 }
 
@@ -992,16 +1006,24 @@ h1 {
   }
 
   .play-pause-pos {
+    font-weight: 700;
+    font-size: 12px;
+    color: #dcdcdc;
 	position: absolute;
 	top: 0;
 	right: 0;
+	z-index: 21;
   }
 
   #play-button {
+    margin-left: 10px;
 	height: 15px;
 	filter: invert(81%) sepia(48%) saturate(1%) hue-rotate(7deg) brightness(101%) contrast(90%);
+	z-index: 21;
   }
 
   #pause-button {
+    margin-left: 10px;
 	height: 15px;
+	z-index: 21;
   }
