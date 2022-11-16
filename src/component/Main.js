@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from "react";
 import { useState } from "react";
 import mainpic from "../assets/midpic.png"
 import lateicon from "../assets/la-te-cup.png"
+import gareicon from "../assets/gare.png"
+import nopeicon from "../assets/nope.png"
 import giticon from "../assets/git-icon.svg"
 import linkicon from "../assets/link-icon.svg"
 import wwwicon from "../assets/www-icon.svg"
@@ -9,6 +11,8 @@ import thankyou from "../assets/thankyou.png"
 import music from "../assets/aboutdreams.mp3"
 import play from "../assets/play.svg"
 import pause from "../assets/pause.svg"
+import arrow from "../assets/arrow.svg"
+import resume from "../assets/resume-icon.svg"
 import Floated from "./Floated/Floated";
 import './Main.css'
 
@@ -16,6 +20,7 @@ import './Main.css'
 
 function Main() {
     const [heartOpacity, setHeartOpacity] = useState(.4)
+    const [arrowOpacity, setArrowOpacity] = useState(0)
     const [firstOpacityChange, setFirstOpacityChange] = useState(0);
     const [opacityChange, setOpacityChange] = useState(0);
     const [nextSetOpacityChange, setNextSetOpacityChange] = useState(0);
@@ -27,6 +32,7 @@ function Main() {
     const [opacityChange6, setOpacityChange6] = useState(0);
     const [opacityChange7, setOpacityChange7] = useState(0);
     const [opacityChange8, setOpacityChange8] = useState(0);
+    const [opacityChange9, setOpacityChange9] = useState(0);
 
     const [zindexSetter, setZIndexSetter] = useState(0);
     const [zindexSetter2, setZIndexSetter2] = useState(0);
@@ -38,6 +44,7 @@ function Main() {
     const [zindexSetter8, setZIndexSetter8] = useState(0);
     const [zindexSetter9, setZIndexSetter9] = useState(0);
     const [zindexSetter10, setZIndexSetter10] = useState(0);
+    const [zindexSetter11, setZIndexSetter11] = useState(0);
 
     const [audioStatus, changeAudioStatus] = useState(false);
     const myRef = useRef();
@@ -59,6 +66,8 @@ function Main() {
         // for play/pause buttons if i want to implement them
         changeAudioStatus(false);
     };
+
+
 
     useEffect(() => {
 
@@ -90,7 +99,181 @@ function Main() {
                 </div>
             )}
             <div className="main-div-about-me-wrapper">
-
+                <img
+                    id="prev-bt"
+                    src={arrow}
+                    style={{
+                        opacity: `${arrowOpacity}`
+                    }}
+                />
+                {firstOpacityChange ?
+                    (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setFirstOpacityChange(0);
+                                setOpacityChange(1);
+                                setZIndexSetter(1);
+                                changeTitle("Gary Song. Ch 2: Puzzle");
+                            }}
+                        />
+                    ) : opacityChange ? (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setOpacityChange(0);
+                                setNextSetOpacityChange(1);
+                                setZIndexSetter2(2);
+                                changeTitle("Gary Song. Ch 3: Abandon");
+                            }}
+                        />
+                    ) : nextSetOpacityChange ? (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setNextSetOpacityChange(0); setNextNextSetOpacityChange(1); setZIndexSetter3(3);
+                                changeTitle("Gary Song. Ch 4: Inversion");
+                            }}
+                        />
+                    ) : nextNextSetOpacityChange ? (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setNextNextSetOpacityChange(0);
+                                setOpacityChange2(1);
+                                setZIndexSetter4(4);
+                                changeTitle("Gary Song. Ch 5: Love What You Do");
+                            }}
+                        />
+                    ) : opacityChange2 ? (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setOpacityChange2(0);
+                                setOpacityChange3(1);
+                                setZIndexSetter5(5);
+                                changeTitle("Gary Song. Ch 6: Seize the Day");
+                            }}
+                        />
+                    ) : opacityChange3 ? (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setOpacityChange3(0);
+                                setOpacityChange4(1);
+                                setZIndexSetter6(6);
+                                changeTitle("Gary Song. Ch 7: Loops");
+                            }}
+                        />
+                    ) : opacityChange4 ? (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setOpacityChange4(0);
+                                setOpacityChange5(1);
+                                setZIndexSetter7(7);
+                                changeTitle("Gary Song. Ch 8: Love");
+                            }}
+                        />
+                    ) : opacityChange5 ? (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setOpacityChange5(0);
+                                setOpacityChange6(1);
+                                setZIndexSetter8(8);
+                                changeTitle("Gary Song. Ch 9: Open Mind");
+                            }}
+                        />
+                    ) : opacityChange6 ? (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setOpacityChange6(0);
+                                setOpacityChange7(1);
+                                setZIndexSetter9(9);
+                                changeTitle("Gary Song. Ch 10: Open Heart");
+                            }}
+                        />
+                    ) : opacityChange7 ? (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setOpacityChange7(0);
+                                setOpacityChange8(1);
+                                setZIndexSetter10(10);
+                                changeTitle("Thank you -Gary Song");
+                            }}
+                        />
+                    ) : opacityChange8 ? (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setOpacityChange8(0);
+                                setOpacityChange9(1);
+                                setZIndexSetter11(8);
+                                setHeartOpacity(.4);
+                            }}
+                        />
+                    ) : (
+                        <img
+                            id="next-bt"
+                            src={arrow}
+                            style={{
+                                opacity: `${arrowOpacity}`
+                            }}
+                            onClick={() => {
+                                setOpacityChange8(0);
+                                setOpacityChange9(1);
+                                setZIndexSetter11(8)
+                            }}
+                        />
+                    )
+                }
                 <div className="line-up-img">
                     <div id="ab-me-img-div">
                         <img
@@ -102,8 +285,9 @@ function Main() {
                             onClick={() => {
                                 setFirstOpacityChange(1);
                                 setHeartOpacity(0);
+                                setArrowOpacity(1);
                                 startAudio();
-                                changeTitle("start")
+                                changeTitle("Gary Song. Ch 1: Identity")
                             }}
                             style={{
                                 opacity: `${heartOpacity}`
@@ -202,13 +386,37 @@ function Main() {
                             </h1>
                         </div>
 
+                        <div className="light-about-me-continue"
+                            onClick={() => {
+                                setOpacityChange7(0);
+                                setOpacityChange8(1);
+                                setZIndexSetter10(10)
+                            }}
+                            style={{
+                                opacity: `${opacityChange7}`,
+                                zIndex: `${zindexSetter9}`
+                            }}>
+                            I've also worked on a couple projects I'm very proud of...
+                            <a href="https://la-te.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                                <img id="projects-icons" className="late-float" src={lateicon} />
+                            </a>
+
+                            <a href="https://nope-yelp.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                                <img id="projects-icons" className="nope-float" src={nopeicon} />
+                            </a>
+
+                            <a href="https://garebnb.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                                <img id="projects-icons" className="gare-float" src={gareicon} />
+                            </a>
+                        </div>
+
 
 
                         <div
                             className="light-about-me-continue4"
                             style={{
-                                opacity: `${opacityChange7}`,
-                                zIndex: `${zindexSetter9}`
+                                opacity: `${opacityChange8}`,
+                                zIndex: `${zindexSetter10}`
                             }}
                         >
                             <img id="ty" src={thankyou} />
@@ -298,7 +506,7 @@ function Main() {
                             onClick={() => {
                                 setOpacityChange6(0);
                                 setOpacityChange7(1);
-                                setZIndexSetter9(9)
+                                setZIndexSetter10(9)
                             }}
                             style={{
                                 opacity: `${opacityChange6}`,
@@ -315,8 +523,8 @@ function Main() {
                             //     setZIndexSetter7(7)
                             // }}
                             style={{
-                                opacity: `${opacityChange7}`,
-                                zIndex: `${zindexSetter9}`
+                                opacity: `${opacityChange8}`,
+                                zIndex: `${zindexSetter10}`
                             }}>
                             <a href="https://github.com/garydsong" target="_blank" rel="noopener noreferrer">
                                 <img id="aboutme-icons-a" src={giticon} />
@@ -330,10 +538,10 @@ function Main() {
                                 <img id="aboutme-icons-c" src={wwwicon} />
                             </a>
 
-                            <a href="https://la-te.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://docs.google.com/document/d/1ai4rCXv3xeyyjqCA2n4uJOPHMM2xq8IF0hwU3mjVQas/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                                 <img
                                     id="aboutme-icons2"
-                                    src={lateicon}
+                                    src={resume}
                                     onClick={() => {
                                         pauseAudio();
                                     }}
