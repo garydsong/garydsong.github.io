@@ -40,6 +40,16 @@
 	z-index: 10;
 }
 
+#ab-me-img-div {
+	position: absolute;
+	height: 100vh;
+	z-index: 10;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -1027,3 +1037,49 @@ h1 {
 	height: 15px;
 	z-index: 21;
   }
+
+  .blob {
+	background: black;
+	position: absolute;
+	top: 35vh;
+	left: 57vw;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	height: 20px;
+	width: 20px;
+	transform: scale(2);
+	animation: pulse-black 2s infinite;
+	opacity: .4;
+  }
+
+  .blob.red {
+	background: rgba(255, 82, 82, 1);
+	box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+	animation: pulse-red 1s infinite;
+	z-index: 999;
+	transition: 2s;
+  }
+
+  .blob.red:hover {
+	cursor: pointer;
+  }
+
+
+  @keyframes pulse-red {
+	0% {
+	  transform: scale(0.55);
+	  box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+	}
+
+	70% {
+	  transform: scale(2);
+	  box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+	}
+
+	100% {
+	  transform: scale(1.95);
+	  box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+	}
+  }
+
+  

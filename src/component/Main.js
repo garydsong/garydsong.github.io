@@ -15,7 +15,7 @@ import './Main.css'
 
 
 function Main() {
-
+    const [heartOpacity, setHeartOpacity] = useState(.4)
     const [firstOpacityChange, setFirstOpacityChange] = useState(0);
     const [opacityChange, setOpacityChange] = useState(0);
     const [nextSetOpacityChange, setNextSetOpacityChange] = useState(0);
@@ -41,6 +41,12 @@ function Main() {
 
     const [audioStatus, changeAudioStatus] = useState(false);
     const myRef = useRef();
+
+    const changeTitle = (title) => {
+        document.title = title;
+        document.getElementById("title-change").innerHTML = document.title;
+    }
+
 
     const startAudio = () => {
         myRef.current.play();
@@ -68,32 +74,42 @@ function Main() {
                 <div className="play-pause-pos">
                     gary song - about dreams
                     <img
-                    id="pause-button"
-                    src={pause}
-                    onClick={pauseAudio}
+                        id="pause-button"
+                        src={pause}
+                        onClick={pauseAudio}
                     />
                 </div>
             ) : (
                 <div className="play-pause-pos">
                     gary song - about dreams
                     <img
-                    id="play-button"
-                    src={play}
-                    onClick={startAudio}
+                        id="play-button"
+                        src={play}
+                        onClick={startAudio}
                     />
                 </div>
             )}
             <div className="main-div-about-me-wrapper">
 
                 <div className="line-up-img">
-                    <img
-                        id="about-me-img"
-                        src={mainpic}
-                        onClick={() => {
-                            setFirstOpacityChange(1);
-                            startAudio()
-                        }}
-                    />
+                    <div id="ab-me-img-div">
+                        <img
+                            id="about-me-img"
+                            src={mainpic}
+
+                        />
+                        <div class="blob red"
+                            onClick={() => {
+                                setFirstOpacityChange(1);
+                                setHeartOpacity(0);
+                                startAudio();
+                                changeTitle("start")
+                            }}
+                            style={{
+                                opacity: `${heartOpacity}`
+                            }}
+                        ></div>
+                    </div>
                     <div className="gradient-left">
                         {/* <div className="light-about-me">
                             I'm still learning about me
@@ -186,16 +202,16 @@ function Main() {
                             </h1>
                         </div>
 
-                    
+
 
                         <div
-                        className="light-about-me-continue4"
-                        style={{
-                            opacity: `${opacityChange7}`,
-                            zIndex: `${zindexSetter9}`
-                        }}
+                            className="light-about-me-continue4"
+                            style={{
+                                opacity: `${opacityChange7}`,
+                                zIndex: `${zindexSetter9}`
+                            }}
                         >
-                            <img id="ty" src={thankyou}/>
+                            <img id="ty" src={thankyou} />
                         </div>
                     </div>
 
@@ -288,7 +304,7 @@ function Main() {
                                 opacity: `${opacityChange6}`,
                                 zIndex: `${zindexSetter8}`
                             }}>
-                                Over the course of my life I've picked up some pretty useful skills...
+                            Over the course of my life I've picked up some pretty useful skills...
                             <Floated />
                         </div>
 
@@ -315,13 +331,13 @@ function Main() {
                             </a>
 
                             <a href="https://la-te.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                            <img
-                                id="aboutme-icons2"
-                                src={lateicon}
-                                onClick={() => {
-                                    pauseAudio();
-                                }}
-                            />
+                                <img
+                                    id="aboutme-icons2"
+                                    src={lateicon}
+                                    onClick={() => {
+                                        pauseAudio();
+                                    }}
+                                />
                             </a>
 
                         </div>
