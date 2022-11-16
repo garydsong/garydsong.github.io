@@ -53,7 +53,7 @@
 	position: absolute;
 	top: 1vh;
 	left: 40vw;
-	height: 20px;
+	height: 23px;
 	transform: scaleX(-1);
 	filter: invert(96%) sepia(20%) saturate(7145%) hue-rotate(178deg) brightness(109%) contrast(98%);
 	z-index: 20;

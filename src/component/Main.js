@@ -13,6 +13,7 @@ import play from "../assets/play.svg"
 import pause from "../assets/pause.svg"
 import arrow from "../assets/arrow.svg"
 import resume from "../assets/resume-icon.svg"
+import refresh from "../assets/refresh-icon.svg"
 import Floated from "./Floated/Floated";
 import './Main.css'
 
@@ -101,11 +102,31 @@ function Main() {
             <div className="main-div-about-me-wrapper">
                 <img
                     id="prev-bt"
-                    src={arrow}
+                    src={refresh}
                     style={{
                         opacity: `${arrowOpacity}`
                     }}
+                    onClick={() => {
+                        setFirstOpacityChange(0);
+                        setHeartOpacity(.4);
+                        setArrowOpacity(0);
+                        setOpacityChange(0);
+                        setNextSetOpacityChange(0);
+                        setNextNextSetOpacityChange(0);
+                        setOpacityChange2(0);
+                        setOpacityChange3(0);
+                        setOpacityChange4(0);
+                        setOpacityChange5(0);
+                        setOpacityChange6(0);
+                        setOpacityChange7(0);
+                        setOpacityChange8(0);
+                        setOpacityChange9(0);
+
+                        changeTitle("No going back, only fresh starts.")
+                    }}
                 />
+
+
                 {firstOpacityChange ?
                     (
                         <img
@@ -304,7 +325,8 @@ function Main() {
                                 opacity: `${opacityChange}`,
                                 zIndex: `${zindexSetter}`
                             }}
-                            onClick={() => { setOpacityChange(0); setNextSetOpacityChange(1); setZIndexSetter2(2) }}>
+                        // onClick={() => { setOpacityChange(0); setNextSetOpacityChange(1); setZIndexSetter2(2) }}
+                        >
                             Moving to the States in my teens was a massive culture shock. Spending my formative years in Korea really shaped me and now more than ever I felt more like a puzzle piece of a different set.
 
                             <div class="Iam">
@@ -329,11 +351,11 @@ function Main() {
                                 opacity: `${nextNextSetOpacityChange}`,
                                 zIndex: `${zindexSetter3}`
                             }}
-                            onClick={() => {
-                                setNextNextSetOpacityChange(0);
-                                setOpacityChange2(1);
-                                setZIndexSetter4(4);
-                            }}
+                        // onClick={() => {
+                        //     setNextNextSetOpacityChange(0);
+                        //     setOpacityChange2(1);
+                        //     setZIndexSetter4(4);
+                        // }}
                         >
                             Needless to say, I didn't come from much and looking back I'm glad that I didn't. Going through everything I had been through has taught me some valuable lessons. Some happy, some sad, all growing. I have my father to thank for indirectly putting a work ethic in me to do whatever I put my mind to and to do it well. Most importantly now I can live my life by some simple rules.
 
@@ -342,11 +364,11 @@ function Main() {
 
                         <div
                             className="light-about-me-continue2"
-                            onClick={() => {
-                                setOpacityChange3(0);
-                                setOpacityChange4(1);
-                                setZIndexSetter6(6);
-                            }}
+                            // onClick={() => {
+                            //     setOpacityChange3(0);
+                            //     setOpacityChange4(1);
+                            //     setZIndexSetter6(6);
+                            // }}
                             style={{
                                 opacity: `${opacityChange3}`,
                                 zIndex: `${zindexSetter5}`
@@ -361,11 +383,11 @@ function Main() {
                         </div>
 
                         <div className="light-about-me-continue3"
-                            onClick={() => {
-                                setOpacityChange5(0);
-                                setOpacityChange6(1);
-                                setZIndexSetter8(8)
-                            }}
+                            // onClick={() => {
+                            //     setOpacityChange5(0);
+                            //     setOpacityChange6(1);
+                            //     setZIndexSetter8(8)
+                            // }}
                             style={{
                                 opacity: `${opacityChange5}`,
                                 zIndex: `${zindexSetter7}`
@@ -387,16 +409,16 @@ function Main() {
                         </div>
 
                         <div className="light-about-me-continue"
-                            onClick={() => {
-                                setOpacityChange7(0);
-                                setOpacityChange8(1);
-                                setZIndexSetter10(10)
-                            }}
+                            // onClick={() => {
+                            //     setOpacityChange7(0);
+                            //     setOpacityChange8(1);
+                            //     setZIndexSetter10(10)
+                            // }}
                             style={{
                                 opacity: `${opacityChange7}`,
                                 zIndex: `${zindexSetter9}`
                             }}>
-                            I've also worked on a couple projects I'm very proud of...
+                            I've also worked on a few projects...
                             <a href="https://la-te.herokuapp.com/" target="_blank" rel="noopener noreferrer">
                                 <img id="projects-icons" className="late-float" src={lateicon} />
                             </a>
@@ -432,11 +454,11 @@ function Main() {
 
                     <div className="white-right">
                         <div className="dark-about-me"
-                            onClick={() => {
-                                setFirstOpacityChange(0);
-                                setOpacityChange(1);
-                                setZIndexSetter(1);
-                            }}
+                            // onClick={() => {
+                            //     setFirstOpacityChange(0);
+                            //     setOpacityChange(1);
+                            //     setZIndexSetter(1);
+                            // }}
                             style={{
                                 opacity: `${firstOpacityChange}`
                             }}
@@ -453,9 +475,9 @@ function Main() {
 
 
                         <div className="dark-about-me-continue"
-                            onClick={() => {
-                                setNextSetOpacityChange(0); setNextNextSetOpacityChange(1); setZIndexSetter3(3)
-                            }}
+                            // onClick={() => {
+                            //     setNextSetOpacityChange(0); setNextNextSetOpacityChange(1); setZIndexSetter3(3)
+                            // }}
                             style={{
                                 opacity: `${nextSetOpacityChange}`,
                                 zIndex: `${zindexSetter2}`
@@ -465,11 +487,11 @@ function Main() {
 
 
                         <div className="dark-about-me-continue2"
-                            onClick={() => {
-                                setOpacityChange2(0);
-                                setOpacityChange3(1);
-                                setZIndexSetter5(5)
-                            }}
+                            // onClick={() => {
+                            //     setOpacityChange2(0);
+                            //     setOpacityChange3(1);
+                            //     setZIndexSetter5(5)
+                            // }}
                             style={{
                                 opacity: `${opacityChange2}`,
                                 zIndex: `${zindexSetter4}`
@@ -484,11 +506,11 @@ function Main() {
 
 
                         <div className="dark-about-me-continue2"
-                            onClick={() => {
-                                setOpacityChange4(0);
-                                setOpacityChange5(1);
-                                setZIndexSetter7(7)
-                            }}
+                            // onClick={() => {
+                            //     setOpacityChange4(0);
+                            //     setOpacityChange5(1);
+                            //     setZIndexSetter7(7)
+                            // }}
                             style={{
                                 opacity: `${opacityChange4}`,
                                 zIndex: `${zindexSetter6}`
@@ -503,11 +525,11 @@ function Main() {
 
 
                         <div className="dark-about-me-continue3"
-                            onClick={() => {
-                                setOpacityChange6(0);
-                                setOpacityChange7(1);
-                                setZIndexSetter10(9)
-                            }}
+                            // onClick={() => {
+                            //     setOpacityChange6(0);
+                            //     setOpacityChange7(1);
+                            //     setZIndexSetter10(9)
+                            // }}
                             style={{
                                 opacity: `${opacityChange6}`,
                                 zIndex: `${zindexSetter8}`
