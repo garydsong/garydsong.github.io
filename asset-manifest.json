@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.94a3a15c.css",
-    "main.js": "/static/js/main.b60ef529.js",
+    "main.css": "/static/css/main.a737e11f.css",
+    "main.js": "/static/js/main.9b6bdd8f.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/aboutdreams.mp3": "/static/media/aboutdreams.94f93d44603bc3fb5b33.mp3",
     "static/media/midpic.png": "/static/media/midpic.a1ffa04157559187d1b5.png",
@@ -9,6 +9,7 @@
     "static/media/la-te-cup.png": "/static/media/la-te-cup.4583515a12d7da543dad.png",
     "static/media/Flask.svg": "/static/media/Flask.3b200b23ebd34ac92edc40c4164fc503.svg",
     "static/media/JQuery.svg": "/static/media/JQuery.c730cc3a3e3bde4a5643f2e26a4ded36.svg",
+    "static/media/gare.png": "/static/media/gare.8943acf6d8e3f90445d9.png",
     "static/media/SQLite.svg": "/static/media/SQLite.7c48ed0de265ed5e4e6c57fca5d15375.svg",
     "static/media/AWS.svg": "/static/media/AWS.0b1b9ae542cebfa669f37c0d81c99d2e.svg",
     "static/media/SVG.svg": "/static/media/SVG.0d6dbecb3b0aaaa2b2f21cbcdc3ae0d0.svg",
@@ -32,20 +33,23 @@
     "static/media/link-icon.svg": "/static/media/link-icon.b5438c1f9fe29dc7c1cb18f42130bf4e.svg",
     "static/media/VSCode.svg": "/static/media/VSCode.832fcc7f88399f79848f458bf495a30d.svg",
     "static/media/JavaScript.svg": "/static/media/JavaScript.9a071f2801f9f92598764d48c7225305.svg",
+    "static/media/arrow.svg": "/static/media/arrow.90f17b95564e9674a14f64a0e5f86af0.svg",
     "static/media/Docker.svg": "/static/media/Docker.f99b96943df37cd4112b8f13839b7eaf.svg",
     "static/media/git-icon.svg": "/static/media/git-icon.fc0ffe042a9582d2a394e1c609baa9f2.svg",
     "static/media/pause.svg": "/static/media/pause.ea258ff8db0f57dcf56472e1898439eb.svg",
+    "static/media/resume-icon.svg": "/static/media/resume-icon.adc1bfb2108c5222dd36bc55cacedfb8.svg",
     "static/media/CSS.svg": "/static/media/CSS.5fcd7f5683afc0fc6d0186a083262016.svg",
     "index.html": "/index.html",
     "static/media/HTML.svg": "/static/media/HTML.ca0db580ffd74f086f2dc2a71dacd660.svg",
     "static/media/Heroku.svg": "/static/media/Heroku.121dd79ec37f8fd52a7f3d9e011d6aae.svg",
+    "static/media/refresh-icon.svg": "/static/media/refresh-icon.3b4058485443a18a69c13365eac65a99.svg",
     "static/media/play.svg": "/static/media/play.196cf32ca83ae8e49fb125f7b9e83103.svg",
-    "main.94a3a15c.css.map": "/static/css/main.94a3a15c.css.map",
-    "main.b60ef529.js.map": "/static/js/main.b60ef529.js.map",
+    "main.a737e11f.css.map": "/static/css/main.a737e11f.css.map",
+    "main.9b6bdd8f.js.map": "/static/js/main.9b6bdd8f.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.94a3a15c.css",
-    "static/js/main.b60ef529.js"
+    "static/css/main.a737e11f.css",
+    "static/js/main.9b6bdd8f.js"
   ]
 }
