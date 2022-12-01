@@ -121,8 +121,7 @@ function Main() {
                         setOpacityChange7(0);
                         setOpacityChange8(0);
                         setOpacityChange9(0);
-
-                        changeTitle("No going back, only fresh starts.")
+                        changeTitle("No going back, only fresh starts.");
                     }}
                 />
 
