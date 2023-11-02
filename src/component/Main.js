@@ -15,6 +15,7 @@ import arrow from "../assets/arrow.svg"
 import resume from "../assets/resume-icon.svg"
 import refresh from "../assets/refresh-icon.svg"
 import Floated from "./Floated/Floated";
+import ding from "../assets/ding.mp3"
 import './Main.css'
 
 
@@ -78,7 +79,7 @@ function Main() {
         <>
             <audio
                 ref={myRef}
-                src={music}
+                src={ding}
             />
             {audioStatus ? (
                 <div className="play-pause-pos">
